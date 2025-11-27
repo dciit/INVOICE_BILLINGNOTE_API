@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "tInnLkxYwTbvr3znuL4gsLiTishL2ONAzIzCE/QUZz4=",
+  "Source": "INVOICE_BILLINGNOTE_API",
+  "BasePath": "_content/INVOICE_BILLINGNOTE_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
+    "Method": "Checkauthen",
+    "RelativePath": "api/authen/checkauthen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mParam",
+        "Type": "INVOICE_VENDER_API.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
+    "Method": "EditPassexp",
+    "RelativePath": "api/authen/editpassexp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mParam",
+        "Type": "INVOICE_VENDER_API.Models.EditPassExpire",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
+    "Method": "Login",
+    "RelativePath": "api/authen/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mParam",
+        "Type": "INVOICE_VENDER_API.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
+    "Method": "Register",
+    "RelativePath": "api/authen/regisuser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mParam",
+        "Type": "INVOICE_VENDER_API.Models.RegisRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_BILLINGNOTE_API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[INVOICE_BILLINGNOTE_API.WeatherForecast, INVOICE_BILLINGNOTE_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

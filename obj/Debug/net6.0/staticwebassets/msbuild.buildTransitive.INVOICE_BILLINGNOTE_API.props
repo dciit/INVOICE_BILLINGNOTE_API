@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\INVOICE_BILLINGNOTE_API.props" />
+</Project>
