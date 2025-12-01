@@ -5,6 +5,68 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/ConfirmInvoice/PostInvoiceRequert": {
+      "post": {
+        "tags": [
+          "ConfirmInvoice"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmInvoiceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmInvoiceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmInvoiceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ConfirmInvoice/PostInvoiceReport": {
+      "post": {
+        "tags": [
+          "ConfirmInvoice"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmInvoiceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmInvoiceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmInvoiceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/authen/regisuser": {
       "post": {
         "tags": [
@@ -171,6 +233,16 @@
   },
   "components": {
     "schemas": {
+      "ConfirmInvoiceRequest": {
+        "type": "object",
+        "properties": {
+          "venderCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EditPassExpire": {
         "type": "object",
         "properties": {

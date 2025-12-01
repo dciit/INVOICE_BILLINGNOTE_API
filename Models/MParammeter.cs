@@ -26,4 +26,10 @@
         public string NewPassword { get; set; }
     }
 
+
+    public class ConfirmInvoiceRequest
+    {
+        public string VenderCode { get; set; }
+    }
+
 }

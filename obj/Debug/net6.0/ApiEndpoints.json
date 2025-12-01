@@ -64,6 +64,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "INVOICE_BILLINGNOTE_API.Controllers.ConfirmInvoiceController",
+    "Method": "PostInvoiceReport",
+    "RelativePath": "api/ConfirmInvoice/PostInvoiceReport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "INVOICE_VENDER_API.Models.ConfirmInvoiceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_BILLINGNOTE_API.Controllers.ConfirmInvoiceController",
+    "Method": "PostInvoiceRequert",
+    "RelativePath": "api/ConfirmInvoice/PostInvoiceRequert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "INVOICE_VENDER_API.Models.ConfirmInvoiceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "INVOICE_BILLINGNOTE_API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

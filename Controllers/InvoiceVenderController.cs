@@ -80,7 +80,7 @@ namespace INVOICE_VENDER_API.Controllers
                 authenregisCmd.Parameters.AddWithValue("@Passwordexpire", passwordexp);
                 authenregisCmd.Parameters.AddWithValue("@Status", "ACTIVE");
 
-                dbSCM.ExecuteCommand(authenregisCmd);
+                dbSCM.ExecuteCommand(authenregisCmd); 
 
 
                 SqlCommand roleCmd = new SqlCommand();
@@ -179,6 +179,7 @@ namespace INVOICE_VENDER_API.Controllers
 
             return Ok(new { result = "OK", input = mParam.Password, pwd = pwd, isMatch = isMatch.ToString(), username = mParam.Username});
         }
+
 
         private string CreateToken(string username)
         {
