@@ -11,20 +11,32 @@
       "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:controllers\\confirminvoicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\connection\\runnumberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:connection\\runnumberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\models\\mparammeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:models\\mparammeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\models\\mrunningnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:models\\mrunningnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\connection\\sqlconnectdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:connection\\sqlconnectdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\connection\\runningnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:connection\\runningnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\models\\mparammeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:models\\mparammeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\models\\dttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:models\\dttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|d:\\project\\2025\\invoice_billingnote_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2DB1B7D-3681-4439-851E-6176DFD00124}|INVOICE_BILLINGNOTE_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,14 +63,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwDIAAAAYAAAAAAAAAA==",
+              "Title": "RunNumberService.cs",
+              "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Connection\\RunNumberService.cs",
+              "RelativeDocumentMoniker": "Connection\\RunNumberService.cs",
+              "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Connection\\RunNumberService.cs",
+              "RelativeToolTip": "Connection\\RunNumberService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T09:45:35.662Z"
+              "WhenOpened": "2025-12-03T10:12:49.865Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,13 +81,40 @@
               "RelativeDocumentMoniker": "Connection\\SqlConnectDB.cs",
               "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Connection\\SqlConnectDB.cs",
               "RelativeToolTip": "Connection\\SqlConnectDB.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T08:34:21.384Z"
+              "WhenOpened": "2025-12-03T10:12:47.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "RunningNumber.cs",
+              "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Connection\\RunningNumber.cs",
+              "RelativeDocumentMoniker": "Connection\\RunningNumber.cs",
+              "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Connection\\RunningNumber.cs",
+              "RelativeToolTip": "Connection\\RunningNumber.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T10:12:44.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwDIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T09:45:35.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DtTable.cs",
               "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Models\\DtTable.cs",
               "RelativeDocumentMoniker": "Models\\DtTable.cs",
@@ -82,7 +122,8 @@
               "RelativeToolTip": "Models\\DtTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T04:24:43.868Z"
+              "WhenOpened": "2025-11-29T04:24:43.868Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -92,7 +133,7 @@
               "RelativeDocumentMoniker": "Controllers\\ConfirmInvoiceController.cs",
               "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Controllers\\ConfirmInvoiceController.cs",
               "RelativeToolTip": "Controllers\\ConfirmInvoiceController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAewC8AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-29T04:18:02.768Z",
               "EditorCaption": ""
@@ -105,7 +146,7 @@
               "RelativeDocumentMoniker": "Controllers\\InvoiceVenderController.cs",
               "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Controllers\\InvoiceVenderController.cs",
               "RelativeToolTip": "Controllers\\InvoiceVenderController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T08:27:23.763Z",
               "EditorCaption": ""
@@ -113,14 +154,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "MRunningNumber.cs",
+              "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Models\\MRunningNumber.cs",
+              "RelativeDocumentMoniker": "Models\\MRunningNumber.cs",
+              "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Models\\MRunningNumber.cs",
+              "RelativeToolTip": "Models\\MRunningNumber.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T10:13:09.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MParammeter.cs",
               "DocumentMoniker": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Models\\MParammeter.cs",
               "RelativeDocumentMoniker": "Models\\MParammeter.cs",
               "ToolTip": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\Models\\MParammeter.cs",
               "RelativeToolTip": "Models\\MParammeter.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA4wCkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T07:02:21.991Z"
+              "WhenOpened": "2025-12-03T07:02:21.991Z",
+              "EditorCaption": ""
             }
           ]
         }

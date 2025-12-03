@@ -1,5 +1,8 @@
 ﻿using System.Data;
+using API_ITTakeOutComputer.Model;
 using INVOICE_VENDER_API.Models;
+using INVOICE_VENDER_API.Services.Create;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -12,6 +15,40 @@ namespace INVOICE_BILLINGNOTE_API.Controllers
     public class ConfirmInvoiceController : ControllerBase
     {
         private OraConnectDB oOraAL02 = new OraConnectDB("ALPHA02");
+        private SqlConnectDB oConSCM = new SqlConnectDB("dbSCM");
+        public string strRunningNbr = "";
+        RunNumberService runNumberService = new RunNumberService();
+
+
+        [HttpGet("{code}")]
+        [AllowAnonymous]
+        public ActionResult Authen(string code)
+        {
+            //string token = CreateToken(code);
+            //return Ok(new { token });
+
+            return Ok(code);
+        }
+
+
+        // ******* RUNNING NUMBER *******
+        [HttpGet]
+        [Route("getNbr")]
+        public IActionResult getNbr()
+        {
+            List<MRunningNumber> resultNbr = new List<MRunningNumber>();
+            MRunningNumber nbr = new MRunningNumber();
+            strRunningNbr = runNumberService.NextId("IT_TAKEOUT");
+
+
+            nbr.Running = strRunningNbr;
+
+
+            resultNbr.Add(nbr);
+
+            return Ok(resultNbr);
+        }
+        // ******* RUNNING NUMBER *******
 
 
         [HttpPost]
