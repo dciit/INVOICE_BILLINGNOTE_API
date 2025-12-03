@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using INVOICE_VENDER_API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -12,6 +13,15 @@ namespace INVOICE_BILLINGNOTE_API.Controllers
     public class ConfirmInvoiceController : ControllerBase
     {
         private OraConnectDB oOraAL02 = new OraConnectDB("ALPHA02");
+
+
+        [HttpGet("{code}")]
+        [AllowAnonymous]
+        public ActionResult Authen(string code)
+        {
+            //string token = CreateToken(code);
+            return Ok(new {  });
+        }
 
 
         [HttpPost]

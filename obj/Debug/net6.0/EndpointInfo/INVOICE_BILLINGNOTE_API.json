@@ -5,6 +5,28 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/ConfirmInvoice/{code}": {
+      "get": {
+        "tags": [
+          "ConfirmInvoice"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/ConfirmInvoice/PostInvoiceRequert": {
       "post": {
         "tags": [
