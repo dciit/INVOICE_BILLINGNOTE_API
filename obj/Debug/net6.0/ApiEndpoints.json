@@ -91,6 +91,22 @@
   },
   {
     "ContainingType": "INVOICE_BILLINGNOTE_API.Controllers.ConfirmInvoiceController",
+    "Method": "Authen",
+    "RelativePath": "api/ConfirmInvoice/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_BILLINGNOTE_API.Controllers.ConfirmInvoiceController",
     "Method": "PostInvoiceReport",
     "RelativePath": "api/ConfirmInvoice/PostInvoiceReport",
     "HttpMethod": "POST",
