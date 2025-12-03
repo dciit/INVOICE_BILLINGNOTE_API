@@ -3223,23 +3223,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anuthida.w\\.nuget\\packages\\": {},
+    "C:\\Users\\pannita.i\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\INVOICE_BILLINGNOTE_API\\INVOICE_BILLINGNOTE_API.csproj",
+      "projectUniqueName": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\INVOICE_BILLINGNOTE_API.csproj",
       "projectName": "INVOICE_BILLINGNOTE_API",
-      "projectPath": "D:\\Project\\INVOICE_BILLINGNOTE_API\\INVOICE_BILLINGNOTE_API.csproj",
-      "packagesPath": "C:\\Users\\anuthida.w\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\INVOICE_BILLINGNOTE_API\\obj\\",
+      "projectPath": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\INVOICE_BILLINGNOTE_API.csproj",
+      "packagesPath": "C:\\Users\\pannita.i\\.nuget\\packages\\",
+      "outputPath": "D:\\Project\\2025\\INVOICE_BILLINGNOTE_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\anuthida.w\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pannita.i\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3266,7 +3266,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net6.0": {
@@ -3310,12 +3310,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.202, 9.0.202]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3324,7 +3318,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

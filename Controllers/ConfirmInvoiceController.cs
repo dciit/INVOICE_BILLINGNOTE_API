@@ -1,5 +1,7 @@
 ﻿using System.Data;
+using API_ITTakeOutComputer.Model;
 using INVOICE_VENDER_API.Models;
+using INVOICE_VENDER_API.Services.Create;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,15 +15,25 @@ namespace INVOICE_BILLINGNOTE_API.Controllers
     public class ConfirmInvoiceController : ControllerBase
     {
         private OraConnectDB oOraAL02 = new OraConnectDB("ALPHA02");
+        public string strRunningNbr = "";
+        RunNumberService runNumberService = new RunNumberService();
 
 
-        [HttpGet("{code}")]
+
+        [HttpGet("getNbr")]
         [AllowAnonymous]
-        public ActionResult Authen(string code)
+        public ActionResult GetNbr()
         {
-            //string token = CreateToken(code);
-            return Ok(new {  });
+            List<MRunningNumber> resultNbr = new List<MRunningNumber>();
+            MRunningNumber nbr = new MRunningNumber();
+            strRunningNbr = runNumberService.NextId("BILLING_NOTE");
+
+            nbr.Running = strRunningNbr;
+            resultNbr.Add(nbr);
+
+            return Ok(resultNbr);
         }
+
 
 
         [HttpPost]

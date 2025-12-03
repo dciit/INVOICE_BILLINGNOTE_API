@@ -20,24 +20,7 @@ namespace INVOICE_VENDER_API.Controllers
         private ClsHelper oHelper = new ClsHelper();
         private SqlConnectDB dbSCM = new SqlConnectDB("dbSCM");
         private SqlConnectDB dbHRM = new SqlConnectDB("dbHRM");
-        public string strRunningNbr = "";
-        RunNumberService runNumberService = new RunNumberService();
 
-
-
-        [HttpGet("getNbr")]
-        [AllowAnonymous]
-        public IActionResult GetNbr()
-        {
-            List<MRunningNumber> resultNbr = new List<MRunningNumber>();
-            MRunningNumber nbr = new MRunningNumber();
-            strRunningNbr = runNumberService.NextId("BILLING_NOTE");
-
-            nbr.Running = strRunningNbr;
-            resultNbr.Add(nbr);
-
-            return Ok(resultNbr);
-        }
 
 
 
