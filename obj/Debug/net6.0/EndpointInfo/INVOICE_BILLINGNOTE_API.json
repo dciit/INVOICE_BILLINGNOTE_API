@@ -67,7 +67,41 @@
         }
       }
     },
-    "/api/authen/regisuser": {
+    "/api/authen/{code}": {
+      "get": {
+        "tags": [
+          "InvoiceVender"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/authen": {
+      "get": {
+        "tags": [
+          "InvoiceVender"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/authen/register": {
       "post": {
         "tags": [
           "InvoiceVender"
@@ -286,11 +320,31 @@
             "type": "string",
             "nullable": true
           },
-          "fname": {
+          "usertype": {
             "type": "string",
             "nullable": true
           },
-          "lname": {
+          "incharge": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "tel": {
+            "type": "string",
+            "nullable": true
+          },
+          "textid": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
             "type": "string",
             "nullable": true
           },

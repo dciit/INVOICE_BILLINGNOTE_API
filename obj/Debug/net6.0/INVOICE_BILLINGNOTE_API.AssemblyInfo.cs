@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("INVOICE_BILLINGNOTE_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dcc92a4528c5960e3db89b2af1087c697ab0648")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a56a687b3bfc351c9b87eded2f7562fe6dfcc3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("INVOICE_BILLINGNOTE_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("INVOICE_BILLINGNOTE_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

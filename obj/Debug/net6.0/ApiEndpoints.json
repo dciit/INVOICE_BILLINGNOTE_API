@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
+    "Method": "AuthenInfo",
+    "RelativePath": "api/authen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
+    "Method": "Authen",
+    "RelativePath": "api/authen/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
     "Method": "Checkauthen",
     "RelativePath": "api/authen/checkauthen",
     "HttpMethod": "POST",
@@ -50,7 +76,7 @@
   {
     "ContainingType": "INVOICE_VENDER_API.Controllers.InvoiceVenderController",
     "Method": "Register",
-    "RelativePath": "api/authen/regisuser",
+    "RelativePath": "api/authen/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

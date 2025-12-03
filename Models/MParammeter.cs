@@ -8,8 +8,13 @@
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Fname { get; set; }
-        public string Lname { get; set; }
+        public string Usertype { get; set; }
+        public string Incharge { get; set; }
+        public string? Email { get; set; }
+        public string? Tel { get; set; }
+        public string? Textid { get; set; }
+        public string? Fax { get; set; }
+        public string? Address { get; set; }
         public string Role { get; set; }
     }
 
@@ -32,4 +37,8 @@
         public string VenderCode { get; set; }
     }
 
+    public class EmpName
+    {
+        public string Username { get; set; }
+    }
 }

@@ -17,9 +17,55 @@ namespace INVOICE_VENDER_API.Controllers
     {
         private ClsHelper oHelper = new ClsHelper();
         private SqlConnectDB dbSCM = new SqlConnectDB("dbSCM");
+        private SqlConnectDB dbHRM = new SqlConnectDB("dbHRM");
+
+        [HttpGet("{code}")]
+        [AllowAnonymous]
+        public ActionResult Authen(string code)
+        {
+            string token = CreateToken(code);
+            return Ok(new { token });
+        }
+
+
+        [HttpGet]
+        [AllowAnonymous]
+        public ActionResult AuthenInfo()
+        {
+            SqlCommand test = new SqlCommand(@"
+            SELECT TOP (1000) [USERNAME]
+              ,[PASSWORD]
+              ,[USERTYPE]
+              ,[PERSON_INCHARGE]
+              ,[EMAIL_INCHARGE]
+              ,[TEL_INCHARGE]
+              ,[TEXTID_INCHARGE]
+              ,[FAX_INCHARGE]
+              ,[PASSWORD_EXPIRE]
+              ,[CRDATE]
+              ,[STATUS]
+              ,[ADDRESS_INCHARGE]
+          FROM [dbSCM].[dbo].[INV_AuthenRegis]");
+
+            DataTable dt = dbSCM.Query(test);
+
+            var rows = new List<Dictionary<string, object>>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                var row = new Dictionary<string, object>();
+                foreach (DataColumn col in dt.Columns)
+                {
+                    row[col.ColumnName] = dr[col];
+                }
+                rows.Add(row);
+            }
+
+            return Ok(rows);
+        }
+
 
         [HttpPost]
-        [Route("regisuser")]
+        [Route("register")]
         public IActionResult Register([FromBody] RegisRequest mParam)
         {
             int res = 0;
@@ -36,7 +82,12 @@ namespace INVOICE_VENDER_API.Controllers
             string rolRef;
             if (requestRole == "ADMIN") rolRef = "rol_admin";
             else if (requestRole == "ACCOUNTANT") rolRef = "rol_accountant";
-            else rolRef = "rol_vender";
+            else  rolRef = "rol_vender";
+
+            string requestUtype = (mParam.Usertype ?? "").Trim().ToUpper();
+            string utype;
+            if (requestUtype == "ADMIN" || requestUtype == "ACCOUNTANT") utype = "DCI";
+            else utype = "VENDER";
 
 
             try
@@ -45,11 +96,10 @@ namespace INVOICE_VENDER_API.Controllers
                 authenCmd.CommandText = @"
                     SELECT 1 
                     FROM [dbSCM].[dbo].[INV_AuthenRegis] 
-                    WHERE USERNAME = @Username AND PASSWORD = @Password AND FNAME = @Fname AND LNAME = @Lname";
+                    WHERE USERNAME = @Username AND PASSWORD = @Password AND PERSON_INCHARGE = @Personincharge";
                 authenCmd.Parameters.AddWithValue("@Username", mParam.Username);
                 authenCmd.Parameters.AddWithValue("@Password", mParam.Password);
-                authenCmd.Parameters.AddWithValue("@Fname", mParam.Fname);
-                authenCmd.Parameters.AddWithValue("@Lname", mParam.Lname);
+                authenCmd.Parameters.AddWithValue("@Personincharge", mParam.Incharge);
 
                 DataTable dtauthenRegis = dbSCM.Query(authenCmd);
 
@@ -61,24 +111,26 @@ namespace INVOICE_VENDER_API.Controllers
                 }
 
 
-                string usercode = oHelper.GenRunningRegis("REG");
-
                 SqlCommand authenregisCmd = new SqlCommand();
                 authenregisCmd.CommandText = @"
                     INSERT INTO [dbSCM].[dbo].[INV_AuthenRegis]
-                    (USERCODE, USERNAME, PASSWORD, FNAME, LNAME, CRDATE, PASSWORD_EXPIRE, STATUS)
+                    (USERNAME, PASSWORD, USERTYPE, PERSON_INCHARGE, EMAIL_INCHARGE, TEL_INCHARGE, TEXTID_INCHARGE, FAX_INCHARGE, CRDATE, PASSWORD_EXPIRE, STATUS, ADDRESS_INCHARGE)
                     VALUES
-                    (@Usercode, @Username, @Password, @Fname, @Lname, GETDATE(), @Passwordexpire, @Status)";
+                    (@Username, @Password, @Usertype, @Personincharge, @Emailincharge, @Telincharge, @Textincharge, @Faxincharge, GETDATE(), @Passwordexpire, @Status, @Addressincharge)";
 
-                authenregisCmd.Parameters.AddWithValue("@Usercode", usercode);
                 authenregisCmd.Parameters.AddWithValue("@Username", mParam.Username);
                 authenregisCmd.Parameters.AddWithValue("@Password", mParam.Password);
-                authenregisCmd.Parameters.AddWithValue("@Fname", mParam.Fname);
-                authenregisCmd.Parameters.AddWithValue("@Lname", mParam.Lname);
+                authenregisCmd.Parameters.AddWithValue("@Usertype", utype);
+                authenregisCmd.Parameters.AddWithValue("@Personincharge", mParam.Incharge);
+                authenregisCmd.Parameters.AddWithValue("@Emailincharge", mParam.Email);
+                authenregisCmd.Parameters.AddWithValue("@Telincharge", mParam.Tel);
+                authenregisCmd.Parameters.AddWithValue("@Textincharge", mParam.Textid);
+                authenregisCmd.Parameters.AddWithValue("@Faxincharge", mParam.Fax);
 
                 DateTime passwordexp = DateTime.Now.AddMonths(3);
                 authenregisCmd.Parameters.AddWithValue("@Passwordexpire", passwordexp);
                 authenregisCmd.Parameters.AddWithValue("@Status", "ACTIVE");
+                authenregisCmd.Parameters.AddWithValue("@Addressincharge", mParam.Address);
 
                 dbSCM.ExecuteCommand(authenregisCmd); 
 
@@ -92,7 +144,7 @@ namespace INVOICE_VENDER_API.Controllers
 
 
                 roleCmd.Parameters.AddWithValue("@Dicttype", "PV_MSTUSR");
-                roleCmd.Parameters.AddWithValue("@Dictkeyno", usercode);
+                roleCmd.Parameters.AddWithValue("@Dictkeyno", mParam.Username);
                 roleCmd.Parameters.AddWithValue("@Dictrefno", rolRef);
 
                 dbSCM.ExecuteCommand(roleCmd);
@@ -171,15 +223,55 @@ namespace INVOICE_VENDER_API.Controllers
         [Route("checkauthen")]
         public IActionResult Checkauthen([FromBody] LoginRequest mParam)
         {
+
+            int res = 0;
+            string msg = "";
             string tokenKey = "dci.daikin.co.jp";
 
             string pwd = Encrypt(mParam.Password, tokenKey);
-
             bool isMatch = (pwd == "KiW1mg/z+3XpGORdA65JxQ==");
 
-            return Ok(new { result = "OK", input = mParam.Password, pwd = pwd, isMatch = isMatch.ToString(), username = mParam.Username});
-        }
+            SqlCommand infoCmd = new SqlCommand(@"
+                SELECT 
+                    auth.USERNAME,
+                    auth.PERSON_INCHARGE,
+                    vnd.VenderName,
+                    dict.DICTREFNO
+                FROM [dbSCM].[dbo].[INV_AuthenRegis] auth
+                LEFT JOIN [dbSCM].[dbo].[INV_DICT] dict
+                    ON auth.USERNAME = dict.DICTKEYNO
+                LEFT JOIN [dbSCM].[dbo].[AL_Vendor] vnd
+                    ON auth.USERNAME = vnd.Vender
+                WHERE auth.USERNAME = @Username
+                  AND auth.PASSWORD = @Password
+                  AND dict.DICTTYPE = 'PV_MSTUSR';");
 
+            infoCmd.Parameters.AddWithValue("@Username", mParam.Username);
+            infoCmd.Parameters.AddWithValue("@Password", mParam.Password);
+
+            DataTable dt = dbSCM.Query(infoCmd);
+            
+            if (dt.Rows.Count == 0)
+            {
+                res = -1;
+                msg = "ไม่พบข้อมูลผู้ใช้งาน";
+                return Ok(new { result = res, message = msg });
+            }
+
+            var user = dt.Rows[0];
+
+            return Ok(new 
+            { 
+                result = "OK", 
+                input = mParam.Password, 
+                pwd = pwd, 
+                isMatch = isMatch.ToString(), 
+                username = user["USERNAME"].ToString(),
+                incharge = user["PERSON_INCHARGE"].ToString(),
+                vendername = user["VenderName"].ToString(),
+                role = user["DICTREFNO"].ToString()
+            });
+        }
 
         private string CreateToken(string username)
         {
@@ -288,5 +380,12 @@ namespace INVOICE_VENDER_API.Controllers
 
 
         }
+
+        //[HttpPost]
+        //[Route("empname")]
+        //public IActionResult EmployeeName([FromBody] )
+
+
+
     }
 }
