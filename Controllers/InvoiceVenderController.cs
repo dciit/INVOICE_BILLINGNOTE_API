@@ -2,8 +2,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using API_ITTakeOutComputer.Model;
 using INVOICE_VENDER_API.Contexts;
 using INVOICE_VENDER_API.Models;
+using INVOICE_VENDER_API.Services.Create;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -18,6 +20,10 @@ namespace INVOICE_VENDER_API.Controllers
         private ClsHelper oHelper = new ClsHelper();
         private SqlConnectDB dbSCM = new SqlConnectDB("dbSCM");
         private SqlConnectDB dbHRM = new SqlConnectDB("dbHRM");
+        public string strRunningNbr = "";
+        RunNumberService runNumberService = new RunNumberService();
+
+
 
         [HttpGet("{code}")]
         [AllowAnonymous]
@@ -25,6 +31,24 @@ namespace INVOICE_VENDER_API.Controllers
         {
             string token = CreateToken(code);
             return Ok(new { token });
+        }
+
+
+        [HttpGet]
+        [Route("getNbr")]
+        public IActionResult getNbr()
+        {
+            List<MRunningNumber> resultNbr = new List<MRunningNumber>();
+            MRunningNumber nbr = new MRunningNumber();
+            strRunningNbr = runNumberService.NextId("BILLING_NOTE");
+
+
+            nbr.Running = strRunningNbr;
+
+
+            resultNbr.Add(nbr);
+
+            return Ok(resultNbr);
         }
 
 
