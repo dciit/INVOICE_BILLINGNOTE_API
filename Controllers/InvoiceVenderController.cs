@@ -25,31 +25,21 @@ namespace INVOICE_VENDER_API.Controllers
 
 
 
-        [HttpGet("{code}")]
+        [HttpGet("getNbr")]
         [AllowAnonymous]
-        public ActionResult Authen(string code)
-        {
-            string token = CreateToken(code);
-            return Ok(new { token });
-        }
-
-
-        [HttpGet]
-        [Route("getNbr")]
-        public IActionResult getNbr()
+        public IActionResult GetNbr()
         {
             List<MRunningNumber> resultNbr = new List<MRunningNumber>();
             MRunningNumber nbr = new MRunningNumber();
             strRunningNbr = runNumberService.NextId("BILLING_NOTE");
 
-
             nbr.Running = strRunningNbr;
-
-
             resultNbr.Add(nbr);
 
             return Ok(resultNbr);
         }
+
+
 
 
         [HttpGet]
